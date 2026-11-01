@@ -76,7 +76,7 @@ h1{font-family:Georgia,serif;font-weight:500;line-height:1.02;font-size:clamp(2.
   <span class="hero-heart">💜</span>
   <div class="eyebrow">Sadece sana özel, Tavşanım</div>
   <h1>Biraz gönlünü<br>alabilir miyim?</h1>
-  <p>Sana kocaman bir mor kalp, birkaç küçük oyun ve içimden geçenleri anlatan minicik bir sayfa hazırladım. Hazırsan başlayalım. ✨</p>
+  <p>Sana kocaman bir mor kalp, birkaç küçük oyun ve içimden geçenleri anlatan minicik bir sayfa hazırladım. 💜</p>
   <div class="hero-actions">
    <button class="btn btn-light" onclick="go('mektup')">Mektubunu aç 💌</button>
    <button class="btn btn-glass" onclick="go('oyun')">Önce oyun! 🎮</button>
@@ -88,12 +88,11 @@ h1{font-family:Georgia,serif;font-weight:500;line-height:1.02;font-size:clamp(2.
   <p class="sub">Bu sayfanın en önemli kısmı oyunlar değil, sana söylemek istediklerim.</p>
   <div class="letter">
    <p>Canım Tavşanım,</p>
-   <p>Yunanistan'daki olay yüzünden aklında eski sevgilimle ilgili bir düşünce oluştuğunu ve bunun seni üzdüğünü anlıyorum. Böyle hissetmene sebep olan belirsizliği görmezden gelmek istemiyorum.</p>
-   <p>Sana kendimi savunmak için değil, seni anlamak ve aklındaki soruları açıkça konuşabilmek için yazıyorum. Olayı kendi açımdan dürüstçe anlatmak, seni de gerçekten dinlemek istiyorum. Hislerini küçümsemiyorum; güveninin benim için değerli olduğunu bilmeni isterim.</p>
-   <p>Bir anda affetmeni beklemiyorum. Sadece aramızdaki yanlış anlaşılmayı sakince çözmek ve yüzünde yeniden bir gülümseme görmek istiyorum.</p>
+   <p>Yunanistan'daki olay yüzünden aklında eski sevgilimle ilgili bir düşünce oluştuğunu ve bunun seni üzdüğü için özür dilerim. Böyle hissetmene sebep olan belirsizliği görmezden gelmek istemiyorum.</p>
+   <p>Sana kendimi savunmak için değil, seni anlamak ve aklındaki soruları açıkça konuşabilmek için yazıyorum.Hislerini küçümsemiyorum; güveninin benim için değerli olduğunu bilmeni isterim.</p>
+   <p>Sadece aramızdaki yanlış anlaşılmayı sakince çözmek ve yüzünde yeniden bir gülümseme görmek istiyorum.</p>
    <p>İyi ki varsın, Tavşanım. Sana kocaman bir mor kalp. 💜</p>
   </div>
-  <p class="honest">Küçük not: En güzel açıklama, yaşananları olduğu gibi ve kendi sözlerinle anlatman. Bu mektuptaki cümleleri gerçeğine göre değiştirebilirsin.</p>
  </section>
 
  <div class="grid">
@@ -108,7 +107,7 @@ h1{font-family:Georgia,serif;font-weight:500;line-height:1.02;font-size:clamp(2.
     <button class="heart" aria-label="Beşinci mor kalp" onclick="collect(this)">💜</button>
    </div>
    <div class="status" id="score" aria-live="polite">Kalpler: 0 / 5</div>
-   <div class="reward hidden" id="prize">🎉 Başardın Tavşanım! Ödülün: sınırsız mor kalp, kocaman bir gülümseme dileği ve birlikte geçireceğimiz güzel zamanlar. 💜</div>
+   <div class="reward hidden" id="prize">🎉 Başardın Tavşanım! Kahveler Benden. 💜</div>
    <div class="row-actions"><button class="btn btn-soft" onclick="resetGame()">Yeniden oyna</button></div>
   </section>
 
@@ -117,9 +116,9 @@ h1{font-family:Georgia,serif;font-weight:500;line-height:1.02;font-size:clamp(2.
    <p>Bu mini testte yanlış cevap yok. Bakalım hangi seçenek sana daha çok uyuyor?</p>
    <strong>Şu an hangisi daha iyi gelir?</strong>
    <div class="quiz-options">
-    <button onclick="answer('snack')">🍫 Tatlı bir atıştırmalık ve film</button>
+    <button onclick="answer('snack')">🍫 Tatlı bir atıştırmalık ve piknik</button>
     <button onclick="answer('laugh')">😂 Birlikte saçma şeylere gülmek</button>
-    <button onclick="answer('talk')">☕ Sakin sakin konuşup anlaşmak</button>
+    <button onclick="answer('talk')">☕ Sakin sakin konuşup kahve date</button>
    </div>
    <div id="quizResult" aria-live="polite">Cevabını seç, sana özel mesajın gelsin. 💜</div>
   </section>
@@ -129,14 +128,11 @@ h1{font-family:Georgia,serif;font-weight:500;line-height:1.02;font-size:clamp(2.
   <h2>🌙 Küçük bir buluşma fikri?</h2>
   <p class="sub">Barışmak için büyük şeylere gerek yok. İkimizin de içinden gelen küçük bir plan yeter.</p>
   <div class="choicegrid">
-   <button onclick="plan('Evde film ve atıştırmalık')">🍿<br>Film gecesi</button>
+   <button onclick="plan('Evde film ve atıştırmalık')">🍫<br>Tatlı date</button>
    <button onclick="plan('Birlikte yürüyüş ve kahve')">☕<br>Kahve & yürüyüş</button>
-   <button onclick="plan('En sevdiğimiz şarkılarla mini dans partisi')">🎶<br>Mini dans partisi</button>
+   <button onclick="plan('En sevdiğimiz şarkılarla mini dans partisi')">🎶<br>Sadece Gezmek</button>
   </div>
-  <div id="dateResult" aria-live="polite">Bir fikre dokun; seçtiğin plan burada belirsin. İstemiyorsan hiç sorun değil. 💜</div>
  </section>
-
- <footer class="footer">Bu sayfa Tavşanım'a, kocaman bir mor kalple hazırlandı. 💜<br>Affetmek için acele yok. Önce birbirimizi anlayalım.</footer>
 </main>
 <script>
 let count=0;
@@ -154,9 +150,9 @@ function resetGame(){
 }
 function answer(type){
  const messages={
-  snack:'Film ve tatlı mı? Bence güzel seçim. Patlamış mısır benden! 🍿💜',
-  laugh:'Anlaştık! Bugün hedefimiz bol kahkaha. En saçma şakalar bile serbest. 😂💜',
-  talk:'Ben de bunu isterim. Seni dikkatle dinlemek ve her şeyi dürüstçe konuşmak istiyorum. ☕💜'
+  snack:'Tatlı date? Bence güzel seçim. Tatlılar Benden! 🍿💜',
+  laugh:'Anlaştık! seninle her aktivite en iyisi zaten💜',
+  talk:'Ben de bunu isterim. Seni dikkatle dinlemek ve Gözlerine tutulmak hoşuma gidiyor. ☕💜'
  };
  document.getElementById('quizResult').textContent=messages[type];
 }
