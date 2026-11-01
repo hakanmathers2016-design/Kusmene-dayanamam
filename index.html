@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#21143d">
+<title>Tavşanım'a 💜</title>
+<style>
+:root{
+  --night:#17102d;--night2:#261746;--violet:#9b70e8;--lav:#d9c5ff;
+  --lilac:#f1eaff;--ink:#30234a;--muted:#746786;--white:#fff;
+  --gold:#f5d98a;--line:#e9def8;--shadow:0 20px 60px #12092522;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:ui-rounded,system-ui,-apple-system,"Segoe UI",sans-serif;
+ background:radial-gradient(ellipse at 10% 0%,#d9c8ff 0,transparent 33%),
+ radial-gradient(ellipse at 100% 30%,#e9ddff 0,transparent 30%),#f8f5ff;min-height:100vh}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(960px,92%);margin:auto;padding:22px 0 55px}
+.hero{position:relative;overflow:hidden;text-align:center;padding:clamp(32px,7vw,76px) 22px;
+ border-radius:34px;color:white;background:linear-gradient(140deg,#21143d,#493078 60%,#7654ad);box-shadow:var(--shadow)}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff20;border-radius:50%;width:260px;height:260px}
+.hero:before{top:-150px;left:-80px}.hero:after{right:-130px;bottom:-190px;width:350px;height:350px}
+.sparkles{font-size:1.1rem;letter-spacing:14px;color:#e8d8ff;margin-bottom:15px}
+.hero-heart{font-size:3.8rem;display:block;filter:drop-shadow(0 7px 14px #08001655);animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px) rotate(-5deg)}}
+.eyebrow{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:#d8c4ff;font-weight:800}
+h1{font-family:Georgia,serif;font-weight:500;line-height:1.02;font-size:clamp(2.5rem,8vw,5.2rem);margin:15px 0}
+.hero p{max-width:600px;margin:0 auto;color:#eee6ff;line-height:1.75;font-size:1.04rem}
+.hero-actions,.row-actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap;margin-top:25px}
+.btn{border:0;border-radius:999px;padding:13px 21px;font-weight:800;transition:.2s;min-height:46px}
+.btn:hover{transform:translateY(-2px)}
+.btn-light{background:#fff;color:#52377f;box-shadow:0 8px 22px #0b061833}
+.btn-glass{background:#ffffff17;color:white;border:1px solid #ffffff55}
+.btn-purple{background:linear-gradient(135deg,#9b70e8,#6945ae);color:#fff;box-shadow:0 8px 20px #6542a333}
+.btn-soft{background:#f0e8ff;color:#5c4384;border:1px solid #e2d5f7}
+.section{margin-top:20px;background:#ffffffdf;border:1px solid #fff;border-radius:27px;padding:clamp(20px,4vw,30px);box-shadow:0 12px 38px #2713420c}
+.section h2{margin:0 0 9px;color:#4a3470;font-family:Georgia,serif;font-size:clamp(1.45rem,4vw,2rem)}
+.sub{color:var(--muted);line-height:1.7;margin:6px 0 17px}
+.letter{background:linear-gradient(145deg,#fbf8ff,#f2eaff);border:1px solid #e9defa;border-radius:21px;padding:21px;line-height:1.9;color:#49375f}
+.letter p{margin:0 0 13px}.letter p:last-child{margin:0}
+.honest{font-size:.88rem;color:#75688a;margin:12px 2px 0;line-height:1.6}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.card{background:#ffffffdf;border:1px solid white;border-radius:26px;padding:23px;box-shadow:0 12px 38px #2713420c}
+.card h2{margin:0 0 8px;color:#4a3470;font-family:Georgia,serif;font-size:1.5rem}
+.card p{color:var(--muted);line-height:1.65}
+.gamebox{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;background:#f7f2ff;border:1px solid #e9defa;border-radius:18px;padding:13px;margin:14px 0}
+.heart{font-size:2rem;border:0;background:transparent;padding:7px;opacity:.35;filter:grayscale(1);transition:.18s}
+.heart:hover{transform:scale(1.15)}.heart.got{opacity:1;filter:none;animation:pop .25s}
+@keyframes pop{50%{transform:scale(1.35)}}
+.status{font-weight:800;color:#67499a}
+.reward{background:#f2eaff;border-radius:16px;padding:15px;color:#563d80;line-height:1.65;margin-top:12px}
+.hidden{display:none!important}
+.quiz-options{display:grid;gap:9px;margin-top:14px}
+.quiz-options button{border:1px solid #e6daf7;border-radius:15px;background:#faf7ff;padding:13px 15px;text-align:left;color:#594775;font-weight:700}
+.quiz-options button:hover{background:#f0e7ff}
+#quizResult{min-height:48px;margin-top:12px;background:#f7f2ff;border-radius:15px;padding:13px;color:#594775;line-height:1.6}
+.choicegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}
+.choicegrid button{border:1px solid #e4d8f5;background:#faf7ff;border-radius:17px;padding:15px 10px;color:#594775;font-weight:750;line-height:1.5}
+.choicegrid button:hover{background:#f0e7ff}
+#dateResult{margin-top:13px;color:#634b87;line-height:1.6;min-height:25px}
+.footer{text-align:center;color:#847694;font-size:.88rem;line-height:1.7;padding:24px 10px}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}
+.confetti span{position:absolute;top:-30px;animation:fall 3s linear forwards;font-size:22px}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:.2}}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.choicegrid{grid-template-columns:1fr}.wrap{width:min(94%,600px);padding-top:12px}.hero{border-radius:26px}.section,.card{border-radius:22px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+<main class="wrap">
+ <header class="hero">
+  <div class="sparkles">✦　✧　✦</div>
+  <span class="hero-heart">💜</span>
+  <div class="eyebrow">Sadece sana özel, Tavşanım</div>
+  <h1>Biraz gönlünü<br>alabilir miyim?</h1>
+  <p>Sana kocaman bir mor kalp, birkaç küçük oyun ve içimden geçenleri anlatan minicik bir sayfa hazırladım. Hazırsan başlayalım. ✨</p>
+  <div class="hero-actions">
+   <button class="btn btn-light" onclick="go('mektup')">Mektubunu aç 💌</button>
+   <button class="btn btn-glass" onclick="go('oyun')">Önce oyun! 🎮</button>
+  </div>
+ </header>
+
+ <section class="section" id="mektup">
+  <h2>💌 Tavşanım'a birkaç kelime</h2>
+  <p class="sub">Bu sayfanın en önemli kısmı oyunlar değil, sana söylemek istediklerim.</p>
+  <div class="letter">
+   <p>Canım Tavşanım,</p>
+   <p>Yunanistan'daki olay yüzünden aklında eski sevgilimle ilgili bir düşünce oluştuğunu ve bunun seni üzdüğünü anlıyorum. Böyle hissetmene sebep olan belirsizliği görmezden gelmek istemiyorum.</p>
+   <p>Sana kendimi savunmak için değil, seni anlamak ve aklındaki soruları açıkça konuşabilmek için yazıyorum. Olayı kendi açımdan dürüstçe anlatmak, seni de gerçekten dinlemek istiyorum. Hislerini küçümsemiyorum; güveninin benim için değerli olduğunu bilmeni isterim.</p>
+   <p>Bir anda affetmeni beklemiyorum. Sadece aramızdaki yanlış anlaşılmayı sakince çözmek ve yüzünde yeniden bir gülümseme görmek istiyorum.</p>
+   <p>İyi ki varsın, Tavşanım. Sana kocaman bir mor kalp. 💜</p>
+  </div>
+  <p class="honest">Küçük not: En güzel açıklama, yaşananları olduğu gibi ve kendi sözlerinle anlatman. Bu mektuptaki cümleleri gerçeğine göre değiştirebilirsin.</p>
+ </section>
+
+ <div class="grid">
+  <section class="card" id="oyun">
+   <h2>💜 Mor kalpleri topla</h2>
+   <p>Beş kalbe dokun. Hepsini bulunca sana küçük bir sürpriz açılacak!</p>
+   <div class="gamebox" id="heartArea">
+    <button class="heart" aria-label="Birinci mor kalp" onclick="collect(this)">💜</button>
+    <button class="heart" aria-label="İkinci mor kalp" onclick="collect(this)">💜</button>
+    <button class="heart" aria-label="Üçüncü mor kalp" onclick="collect(this)">💜</button>
+    <button class="heart" aria-label="Dördüncü mor kalp" onclick="collect(this)">💜</button>
+    <button class="heart" aria-label="Beşinci mor kalp" onclick="collect(this)">💜</button>
+   </div>
+   <div class="status" id="score" aria-live="polite">Kalpler: 0 / 5</div>
+   <div class="reward hidden" id="prize">🎉 Başardın Tavşanım! Ödülün: sınırsız mor kalp, kocaman bir gülümseme dileği ve birlikte geçireceğimiz güzel zamanlar. 💜</div>
+   <div class="row-actions"><button class="btn btn-soft" onclick="resetGame()">Yeniden oyna</button></div>
+  </section>
+
+  <section class="card" id="quiz">
+   <h2>🐰 Tavşanım testi</h2>
+   <p>Bu mini testte yanlış cevap yok. Bakalım hangi seçenek sana daha çok uyuyor?</p>
+   <strong>Şu an hangisi daha iyi gelir?</strong>
+   <div class="quiz-options">
+    <button onclick="answer('snack')">🍫 Tatlı bir atıştırmalık ve film</button>
+    <button onclick="answer('laugh')">😂 Birlikte saçma şeylere gülmek</button>
+    <button onclick="answer('talk')">☕ Sakin sakin konuşup anlaşmak</button>
+   </div>
+   <div id="quizResult" aria-live="polite">Cevabını seç, sana özel mesajın gelsin. 💜</div>
+  </section>
+ </div>
+
+ <section class="section" id="plan">
+  <h2>🌙 Küçük bir buluşma fikri?</h2>
+  <p class="sub">Barışmak için büyük şeylere gerek yok. İkimizin de içinden gelen küçük bir plan yeter.</p>
+  <div class="choicegrid">
+   <button onclick="plan('Evde film ve atıştırmalık')">🍿<br>Film gecesi</button>
+   <button onclick="plan('Birlikte yürüyüş ve kahve')">☕<br>Kahve & yürüyüş</button>
+   <button onclick="plan('En sevdiğimiz şarkılarla mini dans partisi')">🎶<br>Mini dans partisi</button>
+  </div>
+  <div id="dateResult" aria-live="polite">Bir fikre dokun; seçtiğin plan burada belirsin. İstemiyorsan hiç sorun değil. 💜</div>
+ </section>
+
+ <footer class="footer">Bu sayfa Tavşanım'a, kocaman bir mor kalple hazırlandı. 💜<br>Affetmek için acele yok. Önce birbirimizi anlayalım.</footer>
+</main>
+<script>
+let count=0;
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'})}
+function collect(el){
+ if(el.classList.contains('got'))return;
+ el.classList.add('got');count++;
+ document.getElementById('score').textContent=`Kalpler: ${count} / 5`;
+ if(count===5){document.getElementById('prize').classList.remove('hidden');celebrate()}
+}
+function resetGame(){
+ count=0;document.querySelectorAll('.heart').forEach(x=>x.classList.remove('got'));
+ document.getElementById('score').textContent='Kalpler: 0 / 5';
+ document.getElementById('prize').classList.add('hidden');
+}
+function answer(type){
+ const messages={
+  snack:'Film ve tatlı mı? Bence güzel seçim. Patlamış mısır benden! 🍿💜',
+  laugh:'Anlaştık! Bugün hedefimiz bol kahkaha. En saçma şakalar bile serbest. 😂💜',
+  talk:'Ben de bunu isterim. Seni dikkatle dinlemek ve her şeyi dürüstçe konuşmak istiyorum. ☕💜'
+ };
+ document.getElementById('quizResult').textContent=messages[type];
+}
+function plan(value){
+ document.getElementById('dateResult').textContent=`Plan önerin: ${value}. Bunu birlikte, ikimizin de istediği bir zamanda yapalım. 💜`;
+}
+function celebrate(){
+ const box=document.getElementById('confetti');
+ for(let i=0;i<28;i++){
+  const s=document.createElement('span');s.textContent=['💜','✨','⭐'][i%3];
+  s.style.left=Math.random()*100+'%';s.style.animationDelay=(Math.random()*.8)+'s';
+  box.appendChild(s);setTimeout(()=>s.remove(),4000);
+ }
+}
+</script>
+</body>
+</html>
