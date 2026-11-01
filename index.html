@@ -111,19 +111,7 @@ h1{font-family:Georgia,serif;font-weight:500;line-height:1.02;font-size:clamp(2.
    <div class="row-actions"><button class="btn btn-soft" onclick="resetGame()">Yeniden oyna</button></div>
   </section>
 
-  <section class="card" id="quiz">
-   <h2>🐰 Tavşanım testi</h2>
-   <p>Bu mini testte yanlış cevap yok. Bakalım hangi seçenek sana daha çok uyuyor?</p>
-   <strong>Şu an hangisi daha iyi gelir?</strong>
-   <div class="quiz-options">
-    <button onclick="answer('snack')">🍫 Tatlı bir atıştırmalık ve piknik</button>
-    <button onclick="answer('laugh')">😂 Birlikte saçma şeylere gülmek</button>
-    <button onclick="answer('talk')">☕ Sakin sakin konuşup kahve date</button>
-   </div>
-   <div id="quizResult" aria-live="polite">Cevabını seç, sana özel mesajın gelsin. 💜</div>
-  </section>
- </div>
-
+  
  <section class="section" id="plan">
   <h2>🌙 Küçük bir buluşma fikri?</h2>
   <p class="sub">Barışmak için büyük şeylere gerek yok. İkimizin de içinden gelen küçük bir plan yeter.</p>
@@ -148,12 +136,7 @@ function resetGame(){
  document.getElementById('score').textContent='Kalpler: 0 / 5';
  document.getElementById('prize').classList.add('hidden');
 }
-function answer(type){
- const messages={
-  snack:'Tatlı date? Bence güzel seçim. Tatlılar Benden! 🍿💜',
-  laugh:'Anlaştık! seninle her aktivite en iyisi zaten💜',
-  talk:'Ben de bunu isterim. Seni dikkatle dinlemek ve Gözlerine tutulmak hoşuma gidiyor. ☕💜'
- };
+
  document.getElementById('quizResult').textContent=messages[type];
 }
 function plan(value){
